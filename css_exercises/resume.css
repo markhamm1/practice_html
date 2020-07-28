@@ -1,0 +1,36 @@
+/* MARGINS */
+body {
+  margin: 0 auto;
+  max-width: 50em;
+}
+
+/* BODY */
+
+body {
+}
+
+/* FONT */
+
+body {
+  font-family: "Helvetica", "Arial", sans-serif;
+  color: #4d8fd1;
+}
+
+h1 {
+ text-align: center;
+}
+
+h2 {
+
+}
+/* SPACING */
+
+body {
+  line-height: 1.5;
+  padding: 4em 1em;
+}
+
+h2 {
+  margin-top: 1em;
+  padding-top: 1em;
+}
