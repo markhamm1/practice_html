@@ -317,11 +317,66 @@ function howManyZeros(array) {
   return numberOfZeros;
 }
 
-console.log(howManyZeros([4, 6, 0, 2, 1, 0]));
+// console.log(howManyZeros([4, 6, 0, 2, 1, 0]));
 
 // 9. Write a function that takes in an array of numbers and returns true if all the numbers are bigger than 10, otherwise returns false.
+
+function greaterThanTen(array) {
+  var greaterThan = true;
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] < 10) {
+      greaterThan = false;
+      break;
+    }
+  }
+  return greaterThan;
+}
+
+// console.log(greaterThanTen([56, 79, 900]));
+
 // 10. Write a function that takes in an array of words and returns the number of times the letter "a" appeared in total.
+
+function countAs(array) {
+  var numberOfA = 0;
+  for (var i = 0; i < array.length; i++) {
+    for (var j = 0; j < array[i].length; j++) {
+      if (array[i][j] === "a") {
+        numberOfA++;
+      }
+    }
+  }
+  return numberOfA;
+}
+
+// console.log(countAs(["apple", "clap", "applause", "crater"]));
+
 // BONUS PROBLEMS
 // Write a function that accepts a string and returns whether it's a palindrome.
+
+function palindromeCheck(string) {
+  var i = 0;
+  var j = -1;
+  var palindrome = true;
+  var endLetter = "";
+  while (i < Math.floor(string.length / 2)) {
+    console.log(i);
+    if (j === -1) {
+      endLetter = string.slice(j);
+    } else if (j < -1) {
+      endLetter = string.slice(j, j + 1);
+    }
+    console.log(endLetter);
+    if (string[i] !== endLetter) {
+      palindrome = false;
+      break;
+    }
+    i++;
+    j--;
+  }
+  return palindrome;
+}
+
+// console.log(palindromeCheck("racecar"));
+
 // Write a function to generate/print/store the first "n" prime numbers.
 // Given a tic-tac-toe board (matrix of 3 x 3), write a function that can check to see whether X or O won.
